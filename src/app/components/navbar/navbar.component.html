@@ -1,0 +1,17 @@
+<nav class="navbar custom-nav navbar-expand-lg navbar-light">
+    <a class="navbar-brand ml-2" id="nav-brand" href="/">Canvas</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav nav ml-auto"><li class="nav-item">
+        <div class="nav ml-auto">
+            <a *ngIf="isLoggedIn; else loggedIn" class="nav-link nav-button mx-2 my-1 p-2 text-center" (click)="login()">Sign in</a>
+            <ng-template #loggedIn>
+                <a class="nav-link nav-button mx-2 my-1 p-2 text-center" (click)="logout()">Log out</a>
+                <img src="{{ userData.photoURL }}" class="profile-pic my-auto">
+            </ng-template>
+        </div>
+        </li></ul>
+    </div> 
+</nav>
