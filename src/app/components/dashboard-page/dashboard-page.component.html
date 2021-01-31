@@ -5,4 +5,26 @@
             <canvas id="kanvio-board" height="600" width="1100"></canvas>
         </div>
     </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <br/>
+            <h2 class="display-4 d-inline" style="font-size: xx-large;">Change Brush Color: </h2>
+            <input type="color" class="d-inline" id="brush-color" name="brush-color" [(ngModel)]="brushColor" (change)="updateBrushColor()">
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <br/>
+            <h2 class="display-4 d-inline" style="font-size: xx-large;">Change Brush Size: </h2>
+            <input type="range" class="d-inline" id="brush-size" name="brush-size" min="1" [(ngModel)]="brushSize" (change)="updateBrushSize()">
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <br/>
+            <h2 class="display-4 d-inline align-middle" style="font-size: xx-large;">Activate Eraser Mode: </h2>
+            <button class="btn button-dark" (click)="enableEraserMode()">{{mode}}</button>
+        </div>
+    </div>
 </div>
+<br/>
+<br/>
+<br/>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms'; 
 
 import { environment } from "../environments/environment";
 import { AppComponent } from './app.component';
@@ -21,6 +22,7 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule,
     AngularFireModule.initializeApp(
       environment.firebaseConfig,
