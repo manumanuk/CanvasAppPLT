@@ -21,7 +21,7 @@ export class CanvasLoadService {
   }
 
   loadCached(id: string): string {
-    let userData = "";
+    let userData = new fabric.Canvas('').toSVG();
     for(const data in this.dbRead) {
       if(this.dbRead[data].id == id) {
         userData = this.dbRead[data].canvas.toString();
