@@ -1,0 +1,22 @@
+.button-dark {
+    font-weight: 200;
+    border: 0;
+    color: white !important;
+    font-size: 1.25em;
+    border-radius: 5px;
+    width: 5.5em !important;
+    background-color: black;
+}
+  
+.button-dark:hover {
+    background-color: #007bff;
+    /*background-color: #4f000b;*/
+    /*background-color: #2b2b2b;*/
+    color:white !important;
+    border-color:#888;
+    -moz-transition: all .2s ease-in;
+    -o-transition: all .2s ease-in;
+    -webkit-transition: all .2s ease-in;
+    transition: all .2s ease-in;
+    cursor: pointer;
+}

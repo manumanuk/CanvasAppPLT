@@ -22,3 +22,12 @@
     -webkit-transition: all .2s ease-in;
     transition: all .2s ease-in;
 }
+
+.test {
+    border: 1px black solid;
+}
+
+.body {
+    margin: 0;
+    padding: 0;
+}

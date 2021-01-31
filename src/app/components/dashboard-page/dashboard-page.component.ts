@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { LoginService } from 'src/app/services/login.service';
+import { fabric } from 'fabric';
 
 @Component({
   selector: 'app-dashboard-page',
@@ -9,7 +10,8 @@ import { LoginService } from 'src/app/services/login.service';
 })
 export class DashboardPageComponent implements OnInit {
 
-  constructor(private _loginService: LoginService, private _router: Router) { }
+  public canvas: fabric.Canvas = null;
+  constructor(private _loginService: LoginService, private _router: Router) {}
 
   ngOnInit(): void {
     this._loginService.user.subscribe(res => {
@@ -18,6 +20,12 @@ export class DashboardPageComponent implements OnInit {
         this._router.navigate(['/']);
       }
     });
+    this.canvas = new fabric.Canvas("kanvio-board");
+    this.canvas.isDrawingMode = true;
+  }
+
+  ngOnDestroy(): void {
+    console.log("destroyed");
   }
 
 }
