@@ -21,10 +21,31 @@
         <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
             <br/>
             <h2 class="display-4 d-inline align-middle" style="font-size: xx-large;">Activate Eraser Mode: </h2>
-            <button class="btn button-dark" (click)="enableEraserMode()">{{mode}}</button>
+            <button class="btn button-dark" (click)="enableEraserMode()">{{brushMode}}</button>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <br/>
+            <h2 class="display-4 d-inline align-top" style="font-size: xx-large;">Upload an Image: </h2>
+            <input type="file" id="image-upload" accept="image/*" name="filename" (change)="handleUpload($event.target.files)" hidden/>
+            <label for="image-upload" class="btn button-dark" style="width: 7rem !important;">Upload</label>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <br/>
+            <h2 class="display-4 d-inline align-middle" style="font-size: xx-large;">Resize Objects Mode: </h2>
+            <button class="btn button-dark" (click)="enableResize()">{{resizeMode}}</button>
+        </div>
+        <div class="col-lg-6 col-md-6 col-sm-12 col-xs-12">
+            <br/>
+            <h2 class="display-4 d-inline align-middle" style="font-size: xx-large;">Clear Canvas: </h2>
+            <button class="btn button-dark" (click)="clearCanvas()" style="width: 5rem !important;">Clear</button>
         </div>
     </div>
 </div>
 <br/>
 <br/>
 <br/>
+<div>
+    <canvas height="0" width="0" id="fake-canvas"></canvas>
+</div>

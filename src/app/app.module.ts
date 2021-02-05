@@ -8,6 +8,7 @@ import { LoginPageComponent } from './components/login-page/login-page.component
 import { AppRoutingModule } from './app-routing.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
+import { AngularFireStorageModule } from '@angular/fire/storage'
 import { DashboardPageComponent } from './components/dashboard-page/dashboard-page.component';
 import { NavbarComponent } from './components/navbar/navbar.component';
 import { NotFoundPageComponent } from './components/not-found-page/not-found-page.component';
@@ -28,7 +29,8 @@ import { NotFoundPageComponent } from './components/not-found-page/not-found-pag
       environment.firebaseConfig,
       "angular-auth-firebase"
     ),
-    AngularFireAuthModule
+    AngularFireAuthModule,
+    AngularFireStorageModule
   ],
   providers: [],
   bootstrap: [AppComponent]

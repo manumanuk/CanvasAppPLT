@@ -1,4 +1,4 @@
 export interface UserCanvas {
     id: string,
-    canvas: fabric.Object
+    canvas: fabric.Object,
 }  
